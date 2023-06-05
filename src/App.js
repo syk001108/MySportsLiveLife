@@ -53,17 +53,37 @@ function App() {
     setActiveTab('main');
   };
 
-  const buttonStyle = {
+  // 버튼 설정
+  const buttonStyles = {
     width: '190px', // 버튼의 너비
     height: '40px', // 버튼의 높이
     margin: '5px',
-    backgroundColor: '#002063', // 버튼 배경색
-    color: 'white', // 버튼 폰트 색
     fontSize: '15px', // 버튼의 폰트 크기
     borderRadius: '30px', // 모서리 둥글게
     border: 'none', // 테두리 없앰
-    cursor: "pointer" // 가까이 가면 커서를 바꿈
+    cursor: "pointer", // 가까이 가면 커서를 바꿈
   };
+  
+  const custombuttonStyles = { // 팀별 버튼 커스텀
+    lot : {
+      ...buttonStyles,
+      backgroundColor: '#022346', // 버튼 배경색
+      color: 'white', // 버튼 폰트 색
+      fontFamily: "kbom", // 폰트
+    },
+    sam : {
+      ...buttonStyles,
+      backgroundColor: '#0066b3', // 버튼 배경색
+      color: 'white', // 버튼 폰트 색
+      fontFamily: "kbom", // 폰트
+    },
+    gan : {
+      ...buttonStyles,
+      backgroundColor: '#dc5310', // 버튼 배경색
+      color: 'white', // 버튼 폰트 색
+      fontFamily: "k1m", // 폰트
+    },
+  }
 
   const closeButtonStyle = {
     width: '30px', // 버튼의 너비
@@ -93,6 +113,17 @@ function App() {
       textAlign: 'center', // 가운데 정렬 설정
     },
   };
+
+  const popupStyles = { // 리그별 폰트 설정
+    kbo : {
+      ...customModalStyles.content,
+      fontFamily: "kbo",
+    },
+    k1 : {
+      ...customModalStyles.content,
+      fontFamily: "k1",
+    },
+  }
 
   const [modalIsOpen, setModalIsOpen] = useState(false); // 팝업 창이 띄워지지 않는 상태(false)로 기본값 설정
   
@@ -221,24 +252,24 @@ function App() {
         <Modal isOpen={modalIsOpen} style={customModalStyles}>
         {/* 팝업 내용을 구단별로 다르게 표시 */}
         {selectedTeam === 'LOTTE' && (
-          <div>
+          <div style={popupStyles.kbo}>
             <h2>롯데 자이언츠</h2>
-            <button onClick={handleLsButtonClick} style={buttonStyle}>사직 야구장</button>
-            <button onClick={handleLmButtonClick} style={buttonStyle}>울산 문수 야구장</button>
+            <button onClick={handleLsButtonClick} style={custombuttonStyles.lot}>사직 야구장</button>
+            <button onClick={handleLmButtonClick} style={custombuttonStyles.lot}>울산 문수 야구장</button>
           </div>
         )}
         {selectedTeam === 'SAMSUNG' && (
-          <div>
+          <div style={popupStyles.kbo}>
             <h2>삼성 라이온즈</h2>
-            <button onClick={handleSlButtonClick} style={buttonStyle}>대구 삼성 라이온즈 파크</button>
-            <button onClick={handleSpButtonClick} style={buttonStyle}>포항 야구장</button>
+            <button onClick={handleSlButtonClick} style={custombuttonStyles.sam}>대구 삼성 라이온즈 파크</button>
+            <button onClick={handleSpButtonClick} style={custombuttonStyles.sam}>포항 야구장</button>
           </div>
         )}
         {selectedTeam === 'gangwon' && (
-          <div>
+          <div style={popupStyles.k1}>
             <h2>강원 FC</h2>
-            <button onClick={handleGgButtonClick} style={buttonStyle}>강릉종합운동장</button>
-            <button onClick={handleGcButtonClick} style={buttonStyle}>춘천송암스포츠타운</button>
+            <button onClick={handleGgButtonClick} style={custombuttonStyles.gan}>강릉종합운동장</button>
+            <button onClick={handleGcButtonClick} style={custombuttonStyles.gan}>춘천송암스포츠타운</button>
           </div>
         )}
         <img src={closeIcon} alt="Close" onClick={() => setModalIsOpen(false)} style={closeButtonStyle} />

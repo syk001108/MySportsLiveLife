@@ -140,6 +140,10 @@
   src: url("../src/img&font/NanumSquareNeo-eHv.ttf");
 }
 @font-face {
+  font-family: "nanum";
+  src: url("../src/img&font/NanumSquareNeo-cBd.ttf");
+}
+@font-face {
   font-family: "k1";
   /*src: url("../src/img&font/KLeagueBasic-Medium.ttf");*/
   src: url("../src/img&font/KLeagueDynamic-ExtraBold.ttf");

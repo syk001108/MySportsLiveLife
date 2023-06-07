@@ -156,20 +156,15 @@ function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false); // 팝업 창이 띄워지지 않는 상태(false)로 기본값 설정
   
   const [selectedTeam, setSelectedTeam] = useState(null); // 선택된 구단을 관리할 상태 추가
-
+  
+  {/* KBO 리그 */}
   const handleLotteClick = () => {
     setSelectedTeam('LOTTE');
     setModalIsOpen(true); // 롯데 자이언츠를 클릭했을 때 모달을 열도록 상태 변경
   };
-
   const handleSamsungClick = () => {
     setSelectedTeam('SAMSUNG');
     setModalIsOpen(true); // 삼성 라이온즈를 클릭했을 때 모달을 열도록 상태 변경
-  };
-
-  const handleGangwonClick = () => {
-    setSelectedTeam('gangwon');
-    setModalIsOpen(true); // 강원FC를 클릭했을 때 모달을 열도록 상태 변경
   };
   const handleJamsilClick = () => {
     setSelectedTeam('jamsil');
@@ -216,20 +211,63 @@ function App() {
     setModalIsOpen(true);
   };
 
-
+  {/* K리그 */}
+  const handleGangwonClick = () => {
+    setSelectedTeam('gangwon');
+    setModalIsOpen(true); // 강원FC를 클릭했을 때 모달을 열도록 상태 변경
+  };
   const handleGgButtonClick = () => {
-    // 버튼 동작시 행동
+    setSelectedTeam('gg');
+    setModalIsOpen(true);
   };
-
   const handleGcButtonClick = () => {
-    // 버튼 동작시 행동
+    setSelectedTeam('gc');
+    setModalIsOpen(true);
   };
-
+  const handleGwangjuClick = () => {
+    setSelectedTeam('gwangju');
+    setModalIsOpen(true); 
+  };
+  const handleDaeguClick = () => {
+    setSelectedTeam('daegu');
+    setModalIsOpen(true); 
+  };
+  const handleDaejeonClick = () => {
+    setSelectedTeam('daejeon');
+    setModalIsOpen(true); 
+  };
+  const handleSeoulClick = () => {
+    setSelectedTeam('seoul');
+    setModalIsOpen(true); 
+  };
+  const handleSuwonbClick = () => {
+    setSelectedTeam('suwonb');
+    setModalIsOpen(true); 
+  };
+  const handleSuwonfClick = () => {
+    setSelectedTeam('suwonf');
+    setModalIsOpen(true); 
+  };
   const handleUlsanClick = () => {
     setSelectedTeam('ulsan');
     setModalIsOpen(true); 
   };
-
+  const handleIncheonClick = () => {
+    setSelectedTeam('incheon');
+    setModalIsOpen(true); 
+  };
+  const handleJeonbukClick = () => {
+    setSelectedTeam('jeonbuk');
+    setModalIsOpen(true); 
+  };
+  const handleJejuClick = () => {
+    setSelectedTeam('jeju');
+    setModalIsOpen(true); 
+  };
+  const handlePohangClick = () => {
+    setSelectedTeam('pohang');
+    setModalIsOpen(true); 
+  };
   return (
       <div className="App">
         <nav>
@@ -294,17 +332,17 @@ function App() {
                 <h2>K리그1 구단들의 경기장 정보를 확인하세요</h2>
                 <div className="team-info">
                   <div className="team-wrapper"><img src={gangwon} alt="gangwon" style={hoverStyle} onClick={handleGangwonClick} className="gangwon" /><p>강원 FC</p></div>
-                  <div className="team-wrapper"><img src={gwangju} alt="gwangju" style={hoverStyle} onClick={handleUlsanClick} className="gwangju" /><p>광주 FC</p></div>
-                  <div className="team-wrapper"><img src={daegu} alt="daegu" style={hoverStyle} onClick={handleUlsanClick} className="daegu" /><p>대구 FC</p></div>
-                  <div className="team-wrapper"><img src={daejeon} alt="daejeon" style={hoverStyle} onClick={handleUlsanClick} className="daejeon" /><p>대전 하나 시티즌</p></div>
-                  <div className="team-wrapper"><img src={seoul} alt="seoul" style={hoverStyle} onClick={handleUlsanClick} className="seoul" /><p>FC 서울</p></div>
-                  <div className="team-wrapper"><img src={suwonb} alt="suwonb" style={hoverStyle} onClick={handleUlsanClick} className="suwonb" /><p>수원 삼성 블루윙즈</p></div>
-                  <div className="team-wrapper"><img src={suwonf} alt="suwonf" style={hoverStyle} onClick={handleUlsanClick} className="suwonf" /><p>수원 FC</p></div>
+                  <div className="team-wrapper"><img src={gwangju} alt="gwangju" style={hoverStyle} onClick={handleGwangjuClick} className="gwangju" /><p>광주 FC</p></div>
+                  <div className="team-wrapper"><img src={daegu} alt="daegu" style={hoverStyle} onClick={handleDaeguClick} className="daegu" /><p>대구 FC</p></div>
+                  <div className="team-wrapper"><img src={daejeon} alt="daejeon" style={hoverStyle} onClick={handleDaejeonClick} className="daejeon" /><p>대전 하나 시티즌</p></div>
+                  <div className="team-wrapper"><img src={seoul} alt="seoul" style={hoverStyle} onClick={handleSeoulClick} className="seoul" /><p>FC 서울</p></div>
+                  <div className="team-wrapper"><img src={suwonb} alt="suwonb" style={hoverStyle} onClick={handleSuwonbClick} className="suwonb" /><p>수원 삼성 블루윙즈</p></div>
+                  <div className="team-wrapper"><img src={suwonf} alt="suwonf" style={hoverStyle} onClick={handleSuwonfClick} className="suwonf" /><p>수원 FC</p></div>
                   <div className="team-wrapper"><img src={ulsan} alt="ulsan" style={hoverStyle} onClick={handleUlsanClick} className="ulsan" /><p>울산 현대</p></div>
-                  <div className="team-wrapper"><img src={incheon} alt="incheon" style={hoverStyle} onClick={handleUlsanClick} className="incheon" /><p>인천 유나이티드 FC</p></div>
-                  <div className="team-wrapper"><img src={jeonbuk} alt="jeonbuk" style={hoverStyle} onClick={handleUlsanClick} className="jeonbuk" /><p>전북 현대 모터스</p> </div>
-                  <div className="team-wrapper"><img src={jeju} alt="jeju" style={hoverStyle} onClick={handleUlsanClick} className="jeju" /><p>제주 유나이티드 FC</p></div>
-                  <div className="team-wrapper"><img src={pohang} alt="pohang" style={hoverStyle} onClick={handleUlsanClick} className="pohang" /><p>포항 스틸러스</p></div>
+                  <div className="team-wrapper"><img src={incheon} alt="incheon" style={hoverStyle} onClick={handleIncheonClick} className="incheon" /><p>인천 유나이티드 FC</p></div>
+                  <div className="team-wrapper"><img src={jeonbuk} alt="jeonbuk" style={hoverStyle} onClick={handleJeonbukClick} className="jeonbuk" /><p>전북 현대 모터스</p> </div>
+                  <div className="team-wrapper"><img src={jeju} alt="jeju" style={hoverStyle} onClick={handleJejuClick} className="jeju" /><p>제주 유나이티드 FC</p></div>
+                  <div className="team-wrapper"><img src={pohang} alt="pohang" style={hoverStyle} onClick={handlePohangClick} className="pohang" /><p>포항 스틸러스</p></div>
                 </div>
               </div>
             )}
@@ -581,6 +619,187 @@ function App() {
             </div>
           </div>  
         )}
+        {selectedTeam === 'gg' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>강릉종합운동장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                강원도 강릉시 종합운동장길 69 (교동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>21,146석</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S구역(원정)</div>
+                <h2>교통</h2>
+                <div>철도: 강릉역</div>
+                <div>시내버스: 종합경기장, e-편한세상아파트</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://ticket.interpark.com/Contents/Sports/GoodsInfo?SportsCode=07002&TeamCode=PS014")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'gc' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>춘천송암스포츠타운</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                강원도 춘천시 스포츠타운길 136 (송암동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>20,000석</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S구역(원정)</div>
+                <h2>교통</h2>
+                <div>시내버스: 송암스포츠타운(2250), 송암스포츠타운(2233)</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://ticket.interpark.com/Contents/Sports/GoodsInfo?SportsCode=07002&TeamCode=PS014")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'gwangju' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>광주축구전용구장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                광주광역시 서구 금화로 278 (풍암동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>10,007석</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|D1~D3구역(안전 문제로 S구역 폐쇄)(원정)</div>
+                <h2>교통</h2>
+                <div>시내버스: 월드컵경기장, 월드컵경기장주차장, 염주체육관</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/79#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'daegu' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>DGB 대구은행 파크</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                대구광역시 북구 고성로 191 (고성동3가)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>12,419석</div>
+                <h2>홈|원정</h2>
+                <div>S구역(홈)|N5구역(원정)</div>
+                <h2>교통</h2>
+                <div>도시철도: 대구역(대구 도시철도 1호선), 북구청역 (DGB대구은행파크)(대구 도시철도 3호선)</div>
+                <div>시내버스: DGB대구은행파크동편, DGB대구은행파크남편, 시민교회, 대구도시공사, 대구은행제2본점</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/84#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'daejeon' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>대전월드컵경기장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                대전광역시 유성구 월드컵대로 32 (노은동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>40,903석(42,000명 수용)</div>
+                <h2>홈|원정</h2>
+                <div>S구역(홈)|N구역(원정)</div>
+                <h2>교통</h2>
+                <div>도시철도: 월드컵경기장(노은도매시장)역(대전 도시철도 1호선)</div>
+                <div>시내버스: 노은농수산물시장(42260, 42270)</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.dhcfc.kr/dhboard/dhboard_view.php?no_seq=23970&page=1&buid=notice&s_field=&s_value=")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'seoul' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>서울월드컵경기장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                서울특별시 마포구 월드컵로 240 (성산동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>66,704석</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S(A~C)구역(원정)</div>
+                <h2>교통</h2>
+                <div>도시철도: 월드컵경기장(성산)역(서울 지하철 6호선), 디지털미디어시티역(서울 지하철 6호선, 수도권 전철 경의중앙선, 인천국제공항철도)</div>
+                <div>시내버스: 월드컵경기장남측월드컵공원, 월드컵경기장 북측, 월드컵경기장 서측</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/65#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'suwonb' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>수원월드컵경기장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                경기도 수원시 팔달구 월드컵로 310 (우만동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>42,542석 (최대 44,000명 수용)</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S구역(원정)</div>
+                <h2>교통</h2>
+                <div>도시철도: 광교중앙(아주대)역(신분당선)</div>
+                <div>시내버스: 수원월드컵경기장.아름학교, 수원월드컵경기장.동성중학교, 여권민원실.풍림아파트</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://ticket.interpark.com/Contents/Sports/GoodsInfo?SportsCode=07002&TeamCode=PS003")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'suwonf' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>수원종합운동장 주경기장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                경기도 수원시 장안구 경수대로 893 (조원동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>11,808석 (최대 15,000명 수용) </div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S구역(원정)</div>
+                <h2>교통</h2>
+                <div>시내버스: 수원종합운동장.한국건강검진협회, 한국건강검진협회.수원종합운동장, 로얄팰리스, 수원종합운동장.로얄팰리스.아너스빌위즈, 수원종합운동장.수원시체육회관.아너스빌위즈, 영화초등학교.한국건강관리협회</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://ticket.interpark.com/Contents/Sports/GoodsInfo?SportsCode=07002&TeamCode=PS061")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
         {selectedTeam === 'ulsan' && (
           <div style={popupStyles.content}>
             <h1 style={popupStyles.k1head}>울산문수축구경기장</h1>
@@ -599,6 +818,95 @@ function App() {
                 <div>시내버스: 문수경기장(12701), 문수경기장(12704), 문수경기장앞(40617, 3618), 문수경기장앞(40618, 3630), 문수경기장입구(30713)</div>
                 <h2>예매 링크</h2>
                 <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/66#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'incheon' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>인천축구전용경기장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                인천광역시 중구 참외전로 246 (도원동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>18,989석</div>
+                <h2>홈|원정</h2>
+                <div>S구역(홈)|N1~N4구역(원정)</div>
+                <h2>교통</h2>
+                <div>도시철도: 도원역(수도권 전철 1호선), 숭의(인하대병원)역(수도권 전철 수인·분당선)</div>
+                <div>시내버스: 도원역, 인천축구전용경기장, 숭의로터리</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/77#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'jeonbuk' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>전주월드컵경기장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                전라북도 전주시 덕진구 기린대로 1055 (장동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>36,781석</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S(A~C)구역(원정)</div>
+                <h2>교통</h2>
+                <div>시내버스: 월드컵경기장, 월드컵경기장남문, 면허시험장월드컵경기장, 호남제일문, 원반월마을</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/73#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'jeju' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>제주월드컵경기장</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                제주특별자치도 서귀포시 월드컵로 33 (법환동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>29,791석</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S구역(원정)</div>
+                <h2>교통</h2>
+                <div>시내버스: 제주월드컵경기장, 제주월드컵경기장 서문, 서귀포버스터미널, 제주월드컵경기장 서귀포버스터미널,대륜동주민센터</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/76#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
+              </div>
+            </div>
+          </div>  
+        )}
+        {selectedTeam === 'pohang' && (
+          <div style={popupStyles.content}>
+            <h1 style={popupStyles.k1head}>포항스틸야드</h1>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                {/* 좌측 내용 */}
+                경상북도 포항시 남구 동해안로6213번길 20 (괴동동)
+              </div>
+              <div style={{ flex: 1 }}>
+                {/* 우측 내용 */}
+                <h2>수용 인원</h2>
+                <div>15,521석</div>
+                <h2>홈|원정</h2>
+                <div>N구역(홈)|S(A1~A3)구역(원정)</div>
+                <h2>교통</h2>
+                <div>시내버스: 포항스틸야드, 포스코 본사</div>
+                <h2>예매 링크</h2>
+                <button onClick={()=>{window.open("https://www.ticketlink.co.kr/sports/football/74#reservation")}} style={custombuttonStyles.k1}>예매하기</button>
               </div>
             </div>
           </div>  

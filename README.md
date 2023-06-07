@@ -6,8 +6,6 @@
 </picture>
 
 KBO 리그와 K리그1 경기장 정보 제공 웹사이트
-- [User Guide](https://github.com/syk001108/MySportsLiveLife)
-- [Developer Guide](https://github.com/syk001108/MySportsLiveLife)
 ## 기능
 -	KBO리그 및 K리그1 구단 목록 확인
 -	경기장 주소 제공

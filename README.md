@@ -8,3 +8,26 @@
 KBO 리그와 K리그1 경기장 정보 제공 웹사이트
 - [User Guide](https://github.com/syk001108/MySportsLiveLife)
 - [Developer Guide](https://github.com/syk001108/MySportsLiveLife)
+## 기능
+-	KBO리그 및 K리그1 구단 목록 확인
+-	경기장 주소 제공
+-	경기장 위치 제공
+-	경기장 수용인원 제공
+-	홈 좌석/원정 좌석 위치 제공
+-	경기장 근처 지하철역/버스정류장 제공 
+-	경기 예매 링크 제공
+![React App — Mozilla Firefox 2023-06-08 00-12-22](https://github.com/syk001108/MySportsLiveLife/assets/57708995/b4f9d6d2-c17b-466f-8831-11eaa95b109d)
+![React App — Mozilla Firefox 2023-06-08 00-12-39](https://github.com/syk001108/MySportsLiveLife/assets/57708995/3f3a9ab2-3015-497c-aed0-60f2a3911817)
+## 개발 환경
+  ![image](https://github.com/syk001108/MySportsLiveLife/assets/57708995/92667689-ee69-4a45-8254-6444d6b43283)
+## 설치 및 실행
+- 설치
+  ```
+  git clone https://github.com/syk001108/MySportsLiveLife.git
+  cd msll
+  npm install
+  ```
+- 실행
+  ```
+  npm start
+  ```
